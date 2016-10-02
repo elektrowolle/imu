@@ -1,0 +1,46 @@
+Building project imu (NUCLEO_L476RG, GCC_ARM)
+Scan: .
+Scan: FEATURE_BLE
+Scan: FEATURE_CLIENT
+Scan: FEATURE_COMMON_PAL
+Scan: FEATURE_UVISOR
+Scan: FEATURE_IPV4
+Scan: FEATURE_IPV6
+Scan: FEATURE_STORAGE
+Scan: mbed
+Scan: env
+Compile: main.cpp
+[Warning] IMU.h@26,1: "/*" within comment [-Wcomment]
+[Warning] IMU.h@726,8: extra tokens at end of #endif directive [-Wendif-labels]
+[Error] main.cpp@31,21: call of overloaded 'abs(float&)' is ambiguous
+[ERROR] In file included from ./main.cpp:6:0:
+./bno055/IMU.h:26:1: warning: "/*" within comment [-Wcomment]
+ /***************************************************************************
+ ^
+In file included from ./main.cpp:6:0:
+./bno055/IMU.h:726:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
+ #endif __NAXISMOTION_H__
+        ^
+./main.cpp: In function 'void print(T) [with T = float]':
+./main.cpp:31:21: error: call of overloaded 'abs(float&)' is ambiguous
+   printf("%f", abs(v));
+                     ^
+In file included from /usr/local/Cellar/arm-none-eabi-gcc/5.0-2016-q1-update/arm-none-eabi/include/string.h:10:0,
+                 from ./mbed-os/hal/api/Callback.h:19,
+                 from ./mbed-os/rtos/rtos/Thread.h:27,
+                 from ./mbed-os/rtos/rtos/rtos.h:25,
+                 from ./mbed-os/hal/api/mbed.h:22,
+                 from ./main.cpp:5:
+/usr/local/Cellar/arm-none-eabi-gcc/5.0-2016-q1-update/arm-none-eabi/include/stdlib.h:66:5: note: candidate: int abs(int)
+ int _EXFUN(abs,(int));
+     ^
+In file included from ./mbed-os/hal/api/platform.h:24:0,
+                 from ./mbed-os/hal/api/mbed.h:30,
+                 from ./main.cpp:5:
+/usr/local/Cellar/arm-none-eabi-gcc/5.0-2016-q1-update/arm-none-eabi/include/c++/5.3.1/cstdlib:174:3: note: candidate: long long int std::abs(long long int)
+   abs(long long __x) { return __builtin_llabs (__x); }
+   ^
+/usr/local/Cellar/arm-none-eabi-gcc/5.0-2016-q1-update/arm-none-eabi/include/c++/5.3.1/cstdlib:166:3: note: candidate: long int std::abs(long int)
+   abs(long __i) { return __builtin_labs(__i); }
+   ^
+

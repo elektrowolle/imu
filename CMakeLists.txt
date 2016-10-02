@@ -1,0 +1,5 @@
+cmake_minimum_required (VERSION 2.6)
+project (Tutorial)
+#include(mbed-os/hal/CMakeLists.txt)
+include_directories(mbed-os/hal/api)
+add_subdirectory(mbed-os/hal)
