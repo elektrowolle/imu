@@ -1,0 +1,1 @@
+/Applications/coding/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -std=c++11 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/simple_example.dir/main.cpp.o CMakeFiles/simple_example.dir/bno055/IMU.cpp.o  -o simple_example  
