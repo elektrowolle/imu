@@ -11,36 +11,27 @@ Scan: mbed
 Scan: env
 Compile: main.cpp
 [Warning] IMU.h@26,1: "/*" within comment [-Wcomment]
-[Warning] IMU.h@726,8: extra tokens at end of #endif directive [-Wendif-labels]
-[Error] main.cpp@31,21: call of overloaded 'abs(float&)' is ambiguous
-[ERROR] In file included from ./main.cpp:6:0:
-./bno055/IMU.h:26:1: warning: "/*" within comment [-Wcomment]
- /***************************************************************************
- ^
-In file included from ./main.cpp:6:0:
-./bno055/IMU.h:726:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
- #endif __NAXISMOTION_H__
-        ^
-./main.cpp: In function 'void print(T) [with T = float]':
-./main.cpp:31:21: error: call of overloaded 'abs(float&)' is ambiguous
-   printf("%f", abs(v));
-                     ^
-In file included from /usr/local/Cellar/arm-none-eabi-gcc/5.0-2016-q1-update/arm-none-eabi/include/string.h:10:0,
-                 from ./mbed-os/hal/api/Callback.h:19,
-                 from ./mbed-os/rtos/rtos/Thread.h:27,
-                 from ./mbed-os/rtos/rtos/rtos.h:25,
-                 from ./mbed-os/hal/api/mbed.h:22,
-                 from ./main.cpp:5:
-/usr/local/Cellar/arm-none-eabi-gcc/5.0-2016-q1-update/arm-none-eabi/include/stdlib.h:66:5: note: candidate: int abs(int)
- int _EXFUN(abs,(int));
-     ^
-In file included from ./mbed-os/hal/api/platform.h:24:0,
-                 from ./mbed-os/hal/api/mbed.h:30,
-                 from ./main.cpp:5:
-/usr/local/Cellar/arm-none-eabi-gcc/5.0-2016-q1-update/arm-none-eabi/include/c++/5.3.1/cstdlib:174:3: note: candidate: long long int std::abs(long long int)
-   abs(long long __x) { return __builtin_llabs (__x); }
-   ^
-/usr/local/Cellar/arm-none-eabi-gcc/5.0-2016-q1-update/arm-none-eabi/include/c++/5.3.1/cstdlib:166:3: note: candidate: long int std::abs(long int)
-   abs(long __i) { return __builtin_labs(__i); }
-   ^
-
+[Warning] IMU.h@727,8: extra tokens at end of #endif directive [-Wendif-labels]
+[Warning] main.cpp@26,17: format '%i' expects argument of type 'int', but argument 2 has type 'long unsigned int' [-Wformat=]
+[Warning] main.cpp@31,18: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'double' [-Wformat=]
+Link: imu
+Elf2Bin: imu
++---------------------+-------+-------+------+
+| Module              | .text | .data | .bss |
++---------------------+-------+-------+------+
+| Fill                |   104 |     3 |    9 |
+| Misc                | 33071 |  2229 |  108 |
+| features/frameworks |    44 |     0 |    0 |
+| features/net        |    12 |     0 |    0 |
+| hal/common          |  2241 |     4 |  309 |
+| hal/targets         | 10176 |     4 | 1580 |
+| rtos/rtos           |   119 |     4 |    0 |
+| rtos/rtx            |  5717 |    20 | 6790 |
+| Subtotals           | 51484 |  2264 | 8796 |
++---------------------+-------+-------+------+
+Allocated Heap: unknown
+Allocated Stack: unknown
+Total Static RAM memory (data + bss): 11060 bytes
+Total RAM memory (data + bss + heap + stack): 11060 bytes
+Total Flash memory (text + data + misc): 53748 bytes
+Image: ./.build/NUCLEO_L476RG/GCC_ARM/imu.bin

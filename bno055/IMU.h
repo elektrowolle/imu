@@ -107,7 +107,8 @@ private:
     ///Values
     bool 	dataUpdateMode;								//Variable to store the mode of updating data
     struct 	bno055_t 			myBNO;					//Structure that stores the device information
-    struct 	bno055_accel_float_t	accelData;				//Structure that holds the accelerometer data
+    struct 	bno055_accel_t	accelData;				//Structure that holds the accelerometer data
+    struct 	bno055_accel_float_t	accelDataF;				//Structure that holds the accelerometer data
     struct 	bno055_mag_float_t	magData;				//Structure that holds the magnetometer data
     struct 	bno055_gyro_float_t 	gyroData;				//Structure that holds the gyroscope data
     struct 	bno055_quaternion_t	quatData;				//Structure that holds the quaternion data
@@ -143,7 +144,7 @@ public:
 //    NAxisMotion();
     NAxisMotion(
             I2C         _i2C,
-            DigitalOut  _resetPin = RESET_PIN,
+            PinName     _resetPin = RESET_PIN,
             InterruptIn _intPin   = INT_PIN
     );
 

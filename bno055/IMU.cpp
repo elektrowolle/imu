@@ -69,9 +69,9 @@
 
 NAxisMotion::NAxisMotion(
   I2C         _i2c,
-  DigitalOut  _resetPin,
+  PinName     _resetPin,
   InterruptIn _intPin
-) : resetPin(_resetPin) , intPin(_intPin){
+) : resetPin(DigitalOut(_resetPin)) , intPin(_intPin){
   NAxisMotion::i2c = &_i2c;
 };
 
@@ -190,7 +190,7 @@ void NAxisMotion::setPowerMode(byte powerMode)
 void NAxisMotion::updateAccel(void)
 {
   BNO055_RETURN_FUNCTION_TYPE comRes = BNO055_INIT_VALUE;		//Holds the communication results
-  comRes = bno055_convert_float_accel_xyz_msq(&accelData);	//Read the data from the sensor
+  comRes = bno055_read_accel_xyz(&accelData);	//Read the data from the sensor
 }
 
 /*******************************************************************************************

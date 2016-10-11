@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=c++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/benjaminskirlo1/imu/mbed-os/hal/api 
+CXX_INCLUDES = 
 

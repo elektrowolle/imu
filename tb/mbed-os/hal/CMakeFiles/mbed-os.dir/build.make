@@ -49,23 +49,23 @@ CMAKE_SOURCE_DIR = /Users/benjaminskirlo1/imu
 CMAKE_BINARY_DIR = /Users/benjaminskirlo1/imu/tb
 
 # Include any dependencies generated for this target.
-include CMakeFiles/mbed-os.dir/depend.make
+include mbed-os/hal/CMakeFiles/mbed-os.dir/depend.make
 
 # Include the progress variables for this target.
-include CMakeFiles/mbed-os.dir/progress.make
+include mbed-os/hal/CMakeFiles/mbed-os.dir/progress.make
 
 # Include the compile flags for this target's objects.
-include CMakeFiles/mbed-os.dir/flags.make
+include mbed-os/hal/CMakeFiles/mbed-os.dir/flags.make
 
-CMakeFiles/mbed-os.dir/requires:
+mbed-os/hal/CMakeFiles/mbed-os.dir/requires:
 
-.PHONY : CMakeFiles/mbed-os.dir/requires
+.PHONY : mbed-os/hal/CMakeFiles/mbed-os.dir/requires
 
-CMakeFiles/mbed-os.dir/clean:
-	$(CMAKE_COMMAND) -P CMakeFiles/mbed-os.dir/cmake_clean.cmake
-.PHONY : CMakeFiles/mbed-os.dir/clean
+mbed-os/hal/CMakeFiles/mbed-os.dir/clean:
+	cd /Users/benjaminskirlo1/imu/tb/mbed-os/hal && $(CMAKE_COMMAND) -P CMakeFiles/mbed-os.dir/cmake_clean.cmake
+.PHONY : mbed-os/hal/CMakeFiles/mbed-os.dir/clean
 
-CMakeFiles/mbed-os.dir/depend:
-	cd /Users/benjaminskirlo1/imu/tb && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/benjaminskirlo1/imu /Users/benjaminskirlo1/imu /Users/benjaminskirlo1/imu/tb /Users/benjaminskirlo1/imu/tb /Users/benjaminskirlo1/imu/tb/CMakeFiles/mbed-os.dir/DependInfo.cmake --color=$(COLOR)
-.PHONY : CMakeFiles/mbed-os.dir/depend
+mbed-os/hal/CMakeFiles/mbed-os.dir/depend:
+	cd /Users/benjaminskirlo1/imu/tb && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/benjaminskirlo1/imu /Users/benjaminskirlo1/imu/mbed-os/hal /Users/benjaminskirlo1/imu/tb /Users/benjaminskirlo1/imu/tb/mbed-os/hal /Users/benjaminskirlo1/imu/tb/mbed-os/hal/CMakeFiles/mbed-os.dir/DependInfo.cmake --color=$(COLOR)
+.PHONY : mbed-os/hal/CMakeFiles/mbed-os.dir/depend
 

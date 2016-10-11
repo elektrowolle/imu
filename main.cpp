@@ -1,9 +1,12 @@
 //
 // Created by Benjamin Skirlo on 29.09.16.
 //
-
+#define DEVICE_I2C 1
 #include "mbed.h"
 #include "bno055/IMU.h"
+#include "bno055/BNO055_driver/bno055.h"
+
+
 
 I2C i2c(I2C_SDA, I2C_SCL);
 
@@ -23,12 +26,12 @@ void print<unsigned char>(unsigned char v){
 
 template <>
 void print<long unsigned int>(long unsigned int v){
-  printf("%li", v);
+  printf("%i", v);
 }
 
 template <>
 void print<float>(float v){
-  printf("%f", v);
+  printf("%ul", v);
 }
 
 void println(){
@@ -83,46 +86,46 @@ int main(){
 
   while(true) {
       motion.updateAccel();        //Update the Accelerometer data
-      motion.updateLinearAccel();  //Update the Linear Acceleration data
-      motion.updateGravAccel();    //Update the Gravity Acceleration data
-      motion.updateCalibStatus();  //Update the Calibration Status
+//      motion.updateLinearAccel();  //Update the Linear Acceleration data
+//      motion.updateGravAccel();    //Update the Gravity Acceleration data
+//      motion.updateCalibStatus();  //Update the Calibration Status
       updateSensorData = false;
 
       print("aX: ");
       print(motion.readAccelX()); //Accelerometer X-Axis data
       print("m/s2 ");
 
-      print(" aY: ");
-      print(motion.readAccelY());  //Accelerometer Y-Axis data
-      print("m/s2 ");
-
-      print(" aZ: ");
-      print(motion.readAccelZ());  //Accelerometer Z-Axis data
-      print("m/s2 ");
-
-      print("      lX: ");
-      print(motion.readLinearAccelX()); //Linear Acceleration X-Axis data
-      print("m/s2 ");
-
-      print(" lY: ");
-      print(motion.readLinearAccelY());  //Linear Acceleration Y-Axis data
-      print("m/s2 ");
-
-      print(" lZ: ");
-      print(motion.readLinearAccelZ());  //Linear Acceleration Z-Axis data
-      print("m/s2 ");
-
-      print("      gX: ");
-      print(motion.readGravAccelX()); //Gravity Acceleration X-Axis data
-      print("m/s2 ");
-
-      print(" gY: ");
-      print(motion.readGravAccelY());  //Gravity Acceleration Y-Axis data
-      print("m/s2 ");
-
-      print(" gZ: ");
-      print(motion.readGravAccelZ());  //Gravity Acceleration Z-Axis data
-      print("m/s2 ");
+//      print(" aY: ");
+//      print(motion.readAccelY());  //Accelerometer Y-Axis data
+//      print("m/s2 ");
+//
+//      print(" aZ: ");
+//      print(motion.readAccelZ());  //Accelerometer Z-Axis data
+//      print("m/s2 ");
+//
+//      print("      lX: ");
+//      print(motion.readLinearAccelX()); //Linear Acceleration X-Axis data
+//      print("m/s2 ");
+//
+//      print(" lY: ");
+//      print(motion.readLinearAccelY());  //Linear Acceleration Y-Axis data
+//      print("m/s2 ");
+//
+//      print(" lZ: ");
+//      print(motion.readLinearAccelZ());  //Linear Acceleration Z-Axis data
+//      print("m/s2 ");
+//
+//      print("      gX: ");
+//      print(motion.readGravAccelX()); //Gravity Acceleration X-Axis data
+//      print("m/s2 ");
+//
+//      print(" gY: ");
+//      print(motion.readGravAccelY());  //Gravity Acceleration Y-Axis data
+//      print("m/s2 ");
+//
+//      print(" gZ: ");
+//      print(motion.readGravAccelZ());  //Gravity Acceleration Z-Axis data
+//      print("m/s2 ");
 
       print("      C: ");
       print(motion.readAccelCalibStatus());  //Accelerometer Calibration Status (0 - 3)

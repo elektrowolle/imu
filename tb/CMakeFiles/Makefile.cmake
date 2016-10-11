@@ -8,12 +8,9 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../CMakeLists.txt"
-  "../mbed-os/hal/CMakeLists.txt"
-  "CMakeFiles/3.5.2/CMakeASMCompiler.cmake"
   "CMakeFiles/3.5.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.5.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.5.2/CMakeSystem.cmake"
-  "/usr/local/Cellar/cmake/3.5.2/share/cmake/Modules/CMakeASMInformation.cmake"
   "/usr/local/Cellar/cmake/3.5.2/share/cmake/Modules/CMakeCInformation.cmake"
   "/usr/local/Cellar/cmake/3.5.2/share/cmake/Modules/CMakeCXXInformation.cmake"
   "/usr/local/Cellar/cmake/3.5.2/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"
@@ -21,10 +18,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/Cellar/cmake/3.5.2/share/cmake/Modules/CMakeLanguageInformation.cmake"
   "/usr/local/Cellar/cmake/3.5.2/share/cmake/Modules/CMakeSystemSpecificInformation.cmake"
   "/usr/local/Cellar/cmake/3.5.2/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake"
-  "/usr/local/Cellar/cmake/3.5.2/share/cmake/Modules/Compiler/AppleClang-ASM.cmake"
   "/usr/local/Cellar/cmake/3.5.2/share/cmake/Modules/Compiler/AppleClang-C.cmake"
   "/usr/local/Cellar/cmake/3.5.2/share/cmake/Modules/Compiler/AppleClang-CXX.cmake"
-  "/usr/local/Cellar/cmake/3.5.2/share/cmake/Modules/Compiler/Clang-ASM.cmake"
   "/usr/local/Cellar/cmake/3.5.2/share/cmake/Modules/Compiler/Clang.cmake"
   "/usr/local/Cellar/cmake/3.5.2/share/cmake/Modules/Compiler/GNU.cmake"
   "/usr/local/Cellar/cmake/3.5.2/share/cmake/Modules/Platform/Darwin-AppleClang-C.cmake"
@@ -46,11 +41,9 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "mbed-os/hal/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/simple_example.dir/DependInfo.cmake"
-  "mbed-os/hal/CMakeFiles/mbed-classic.dir/DependInfo.cmake"
   )
